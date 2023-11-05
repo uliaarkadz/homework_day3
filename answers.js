@@ -235,3 +235,23 @@ for (let i = 0; i < 20; i++) {
 //******************************
 //  Find the Median
 //******************************
+
+// Find the median number in the following nums array, then console.log that number.
+// hint if you check the length of the array / 2, you might get not get a whole number. In which case, look into Math.floor( // something )
+
+const nums = [
+  14, 11, 16, 15, 13, 16, 15, 17, 19, 11, 12, 14, 19, 11, 15, 17, 11, 18, 12,
+  17, 12, 71, 18, 15, 12,
+];
+
+//sort array
+nums.sort();
+
+// find index of the number in the middle
+let midIndex = Math.floor(nums.length / 2);
+
+//oitput medium
+console.log("Median number: " + nums[midIndex]);
+
+// Expected output:
+// => 15
