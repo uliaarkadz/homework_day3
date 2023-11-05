@@ -93,6 +93,93 @@ for (let turtle of ninjaTurtles) {
 // Methods, Revisited
 //******************************
 
+// Here is a list of favMovies:
+
+const favMovies = [
+  "Jaws",
+  "The Fellowship of the Ring",
+  "Howl's Moving Castle",
+  "Django Unchained",
+  "Cloud Atlas",
+  "The Usual Suspects",
+  "Toy Story",
+  "Conan the Barbarian",
+  "Titanic",
+  "Harry Potter",
+  "Fried Green Tomatoes",
+  "Volver",
+  "Oculus",
+  "Seven",
+  "Black Panther",
+  "Harry Potter",
+  "Imitation of Life",
+  "Snatch",
+  "Fast and Furious",
+];
+// Console log: the index of Titanic
+
+console.log(favMovies.indexOf("Titanic"));
+
+// use the .sort method Thought question: what did this do to the array? Did it permanently alter it?
+
+favMovies.sort();
+console.log(favMovies);
+
+// Use the method pop
+
+favMovies.pop();
+console.log(favMovies);
+
+// push "Guardians of the Galaxy"
+
+favMovies.push("Guardians of the Galaxy");
+console.log(favMovies);
+
+// Reverse the array
+
+const reverseArr = favMovies.reverse();
+console.log(reverseArr);
+
+// Use the shift method
+
+favMovies.shift();
+console.log(favMovies);
+
+// unshift - what does it return?
+
+favMovies.unshift("Ice Age");
+console.log(favMovies);
+
+// splice "Django Unchained" and add "Avatar" (try finding the index of "Django Unchained", instead of counting it yourself) Thought question: did this permanently alter our array?
+var index = favMovies.indexOf("Django Unchained");
+favMovies.splice(index, 1, "Avatar");
+console.log(favMovies);
+
+// slice the last half of the array (challenge yourself and try to programatically determine the middle of the array rather than counting it and hard coding it) - Thought question: did this permanently alter our array?
+
+function arrayMiddle(arrLen) {
+  if (arrLen % 2 == 0) {
+    return arrLen / 2;
+  } else {
+    return Math.ceil(arrLen / 2);
+  }
+}
+let middle = arrayMiddle(favMovies.length);
+
+// store the value of your slice in a variable, console.log it - Thought question: what is going on here?
+let removed = favMovies.splice(middle, favMovies.length - middle);
+
+console.log(removed);
+
+// console.log your final results
+console.log(favMovies);
+
+// After running the above tasks, console.log the index of "Fast and Furious" -We removed it from the array, what value do we get when we look for the index of something that is not in the array?
+
+console.log(favMovies.indexOf("Fast and Furious"));
+
+// Thought question: that we declared the variable favMovies with const, and yet, we were allowed to change the array. Weird? Should we have used let?
+
 //******************************
 // Where is Waldo
 //******************************
