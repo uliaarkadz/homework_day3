@@ -39,6 +39,43 @@ for (let i = 1; i <= 100; i++) {
 // Wild Wild Life
 //******************************
 
+// Use the following arrays to answer the questions below (name,species ,age, hometown): You should be modifying the elements by accessing them. It is up to you which methods to use.
+const wolfy = ["Wolfy", "wolf", 16, "Yukon Territory"];
+const sharky = ["Sharky", "shark", 20, "Left Coast"];
+const plantee = ["Plantee", "plant", 5000, "Mordor"];
+const porgee = ["Porgee", "Porg", 186, "Ahch-To"];
+const dart = ["D'Art", "Demogorgan Dog", 2, "Upside Down"];
+
+// Plantee just had her birthday; change Plantee's array to reflect her being a year older.
+
+//using index replacement method
+plantee[2] = 5001;
+console.log(plantee);
+
+// Change Wolfy's hometown from "Yukon Territory" to "Gotham City".
+
+//using splice method
+wolfy.splice(3, 1, "Gotham City");
+console.log(wolfy);
+
+// Give D'Art a second hometown by adding "Hawkins"
+
+//using push method - adds element at the end
+const dart1 = ["D'Art", "Demogorgan Dog", 2, "Upside Down"];
+dart1.push("Hawkins");
+console.log(dart1);
+
+//using splice method
+dart.splice(4, 0, "Hawkins");
+console.log(dart);
+
+// Porgee decides that Wolfy can't be named "Wolfy" anymore. Remove "Wolfy" from the wolfy array and replace it with "Gameboy".
+
+//using shift/unshift methods
+wolfy.shift();
+wolfy.unshift("Gameboy");
+console.log(wolfy);
+
 //******************************
 // Yell at the Ninja Turtles
 //******************************
