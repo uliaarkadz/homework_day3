@@ -184,6 +184,30 @@ console.log(favMovies.indexOf("Fast and Furious"));
 // Where is Waldo
 //******************************
 
+//With the following multi-dimensional array
+const whereIsWaldo = [
+  ["Timmy", "Frank"],
+  "Eggbert",
+  ["Lucinda", "Jacc", "Neff", "Snoop"],
+  ["Petunia", ["Baked Goods", "Waldo"]],
+];
+
+// Remove Eggbert (hint look at the slice/splice method(s))
+
+let indexEgg = whereIsWaldo.indexOf("Eggbert");
+whereIsWaldo.splice(indexEgg, 1);
+console.log(whereIsWaldo);
+
+// Change "Neff" to "No One"
+
+whereIsWaldo[1][2] = "No One";
+console.log(whereIsWaldo);
+
+// Access and console.log "Waldo"
+
+let arr1 = whereIsWaldo.slice(2);
+console.log(arr1[0][1][1]);
+
 //******************************
 //  Excited Kitten
 //******************************
