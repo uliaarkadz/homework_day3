@@ -346,3 +346,58 @@ function matrix(matrix) {
 }
 
 console.log(matrix(array));
+
+//******************************
+// Return of the Closets
+//******************************
+
+//Below, we've given you examples of Kristyn and Thom's closets modeled as data in JavaScript. Use this data to answer the following questions.
+
+const kristynsCloset = [
+  "left shoe",
+  "cowboy boots",
+  "right sock",
+  "GA hoodie",
+  "green pants",
+  "yellow knit hat",
+  "marshmallow peeps",
+];
+
+// Thom's closet is more complicated. Check out this nested data structure!!
+const thomsCloset = [
+  [
+    // These are Thom's shirts
+    "grey button-up",
+    "dark grey button-up",
+    "light blue button-up",
+    "blue button-up",
+  ],
+  [
+    // These are Thom's pants
+    "grey jeans",
+    "jeans",
+    "PJs",
+  ],
+  [
+    // Thom's accessories
+    "wool mittens",
+    "wool scarf",
+    "raybans",
+  ],
+];
+//Alien Attire
+//Kristyn's left shoe has traveled through time and space and turned up in Thom's accessories drawer! Remove Kristyn's shoe from the array and save it to the variable kristynsShoe. Use that variable to add Kristyn's lost shoe to Thom's accessories array.
+
+let kristynsShoe = kristynsCloset.splice(0, 1).toString();
+thomsCloset[2].push(kristynsShoe);
+console.log("KristynsShoe", kristynsShoe);
+console.log("Thom's closet", thomsCloset);
+
+//Dress Us Up
+//Modify your code to put together 3 separate outfits for Kristyn and Thom. Put the output in a sentence to tell us what we'll be wearing. Mix and match!
+console.log(
+  `Kristyn is wearing a ${kristynsCloset[0]}, ${kristynsCloset[2]} and ${kristynsCloset[3]}!`
+);
+console.log(
+  `Kristyn is wearing a ${thomsCloset[0][0]}, ${thomsCloset[1][1]} and ${thomsCloset[2][1]}!`
+);
